@@ -29,7 +29,13 @@
         <property name="hbm2ddl.auto">update</property>
 <!--         <mapping resource="cc/cai/demo/hibernate/entity/Event.hbm.xml"/> -->
 <!--         <mapping resource="cc/cai/demo/hibernate/entity/Person.hbm.xml"/> -->
-        <mapping resource="cc/cai/demo/hibernate/entity/one2one/User.hbm.xml"/>
-        <mapping resource="cc/cai/demo/hibernate/entity/one2one/IdCard.hbm.xml"/>
+<!-- one2one -->
+<!--         <mapping resource="cc/cai/demo/hibernate/entity/one2one/User.hbm.xml"/> -->
+<!--         <mapping resource="cc/cai/demo/hibernate/entity/one2one/IdCard.hbm.xml"/> -->
+
+<!-- one2many -->
+        <mapping resource="cc/cai/demo/hibernate/entity/one2many/CredCard.hbm.xml"/>
+        <mapping resource="cc/cai/demo/hibernate/entity/one2many/Person.hbm.xml"/>
+
 	</session-factory>
 </hibernate-configuration>
