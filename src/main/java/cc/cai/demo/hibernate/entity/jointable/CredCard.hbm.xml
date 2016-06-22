@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cc.cai.demo.hibernate.entity.one2many">
+	<class name="CredCard">
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="credCardNumber" column="credCardNumber" />
+		<join table="personcreadCard">
+		<key column="id"></key>
+		<many-to-one name="person" class="Person" not-null="true"/>
+		</join>
+	</class>
+</hibernate-mapping>

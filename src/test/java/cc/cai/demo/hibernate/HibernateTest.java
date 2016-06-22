@@ -56,24 +56,29 @@ public class HibernateTest {
 	
 	@Test
 	public void one2manyTest(){
+//		SessionFactory sf=HibernateUtil.getSessionFactory();
+//		Session session=sf.getCurrentSession();
+//		session.beginTransaction();
+//		cc.cai.demo.hibernate.entity.one2many.Person person=(cc.cai.demo.hibernate.entity.one2many.Person)session.get(cc.cai.demo.hibernate.entity.one2many.Person.class, new Long(1));
+//		System.out.println(person.getName()+"----------------->cardsSize:"+person.getCards().size());
+//		Set<CredCard> cards=person.getCards();
+//		for(CredCard cc:cards){
+//			System.out.println("cardNumber:"+cc.getCredCardNumber());
+//		}
+//		//当在person的set中设置了 inverse=true,表示person 的set进行改变CredCard,数据库会跟着变化
+//		CredCard cc=new CredCard();
+//		cc.setCredCardNumber("11111");
+//		cc.setPerson(person);
+//		person.getCards().add(cc);
+//		
+//		//测试
+//		
+//		
+//		session.getTransaction().commit();
+	}
+	@Test
+	public void many2oneTest(){
 		SessionFactory sf=HibernateUtil.getSessionFactory();
 		Session session=sf.getCurrentSession();
-		session.beginTransaction();
-		cc.cai.demo.hibernate.entity.one2many.Person person=(cc.cai.demo.hibernate.entity.one2many.Person)session.get(cc.cai.demo.hibernate.entity.one2many.Person.class, new Long(1));
-		System.out.println(person.getName()+"----------------->cardsSize:"+person.getCards().size());
-		Set<CredCard> cards=person.getCards();
-		for(CredCard cc:cards){
-			System.out.println("cardNumber:"+cc.getCredCardNumber());
-		}
-		//当在person的set中设置了 inverse=true,表示person 的set进行改变CredCard,数据库会跟着变化
-		CredCard cc=new CredCard();
-		cc.setCredCardNumber("11111");
-		cc.setPerson(person);
-		person.getCards().add(cc);
-		
-		//测试
-		
-		
-		session.getTransaction().commit();
 	}
 }
