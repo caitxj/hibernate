@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- 对于一对一的实现方式： 1.主表与从表共用主键的方式实现(从表的主键来至主表的主键) 使用 one-to-one 进行实现 1.1从表处以外键生成策略 
+	1.2 <one-to-one name="idCard" constrained="true" /> 2.使用many-to-one 来实现 2.1主键可以使用自己的生成策略 
+	2.2 使用<many-to-one name="idCard" unique="true" column="idcard" not-null="true"/> 
+	给多的一处添加unique=true 即限制为了one-to-one,其中column为字段名称 -->
+<hibernate-mapping package="cc.cai.demo.hibernate.entity.one2one">
+<!-- <class name="User"> -->
+<!-- id:主键定义 -->
+<!-- generator：生成主键策略(native:根据数据能提供的来支持.foreign:外键生成策略,由另外个实体的标识符.increment:自动生成等) -->
+
+<!-- <id name="userId" column="userId"> -->
+<!-- <generator class="foreign"> -->
+<!-- <param name="property">idCard</param> -->
+<!-- </generator> -->
+<!-- </id> -->
+<!-- 定义普通字段的映射关系 -->
+<!-- name:实体属性名称 -->
+<!-- column:表字段名称 -->
+<!-- type:表字段类型 -->
+<!-- length:长度 -->
+<!-- ...... -->
+
+<!-- <property name="name" /> -->
+<!-- <one-to-one name="idCard" constrained="true" /> -->
+<!-- </class> -->
+	<class name="User">
+		<id name="userId" column="userId">
+			<generator class="native" />
+		</id>
+		<property name="name" />
+		<many-to-one name="idCard" unique="true" column="idcard"
+			not-null="true" />
+	</class>
+</hibernate-mapping>

@@ -8,7 +8,8 @@ public class Person {
     private int age;
     private String firstname;
     private String lastname;
-    private Set events = new HashSet();
+    private Event event;
+//    private Set events = new HashSet();
 	public Long getId() {
 		return id;
 	}
@@ -33,11 +34,17 @@ public class Person {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-	public Set getEvents() {
-		return events;
+//	public Set getEvents() {
+//		return events;
+//	}
+//	public void setEvents(Set events) {
+//		this.events = events;
+//	}
+	public Event getEvent() {
+		return event;
 	}
-	public void setEvents(Set events) {
-		this.events = events;
+	public void setEvent(Event event) {
+		this.event = event;
 	}
     
     

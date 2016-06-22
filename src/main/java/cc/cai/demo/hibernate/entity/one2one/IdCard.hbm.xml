@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cc.cai.demo.hibernate.entity.one2one">
+	<class name="IdCard">
+		<id name="idCardId" column="idCardId">
+			<generator class="native"></generator>
+		</id>
+		<property name="cardNum" column="cardNum" />
+		<!-- 
+		表示 一个IdCard 对应 一个user 中的 idCard 属性 
+		如同数据库中IdCard.idCardId=user.idCard.idCardId 来进行关联
+		-->
+		<one-to-one name="user" property-ref="idCard"/>
+	</class>
+</hibernate-mapping>
