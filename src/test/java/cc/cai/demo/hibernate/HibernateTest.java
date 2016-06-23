@@ -1,16 +1,9 @@
 package cc.cai.demo.hibernate;
 
-import java.util.Set;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.Test;
 
-import cc.cai.demo.hibernate.entity.Event;
-import cc.cai.demo.hibernate.entity.Person;
-import cc.cai.demo.hibernate.entity.one2many.CredCard;
-import cc.cai.demo.hibernate.entity.one2one.IdCard;
-import cc.cai.demo.hibernate.entity.one2one.User;
 import cc.cai.demo.hibernate.util.HibernateUtil;
 
 /**
