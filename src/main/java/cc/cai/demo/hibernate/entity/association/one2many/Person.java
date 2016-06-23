@@ -1,4 +1,4 @@
-package cc.cai.demo.hibernate.entity.one2many;
+package cc.cai.demo.hibernate.entity.association.one2many;
 
 import java.util.List;
 import java.util.Set;

@@ -1,14 +1,14 @@
-package cc.cai.demo.hibernate.entity.many2one;
+package cc.cai.demo.hibernate.entity.association.many2many;
 
 import java.util.Set;
 
-public class Employee {
+public class Teacher {
 
 	private long id;
 	
 	private String name;
 	
-	private Set<Address> address;
+	private Set<Student> students;
 
 	public long getId() {
 		return id;
@@ -26,13 +26,15 @@ public class Employee {
 		this.name = name;
 	}
 
-	public Set<Address> getAddress() {
-		return address;
+	public Set<Student> getStudents() {
+		return students;
 	}
 
-	public void setAddress(Set<Address> address) {
-		this.address = address;
+	public void setStudents(Set<Student> students) {
+		this.students = students;
 	}
+
+	
 	
 	
 }

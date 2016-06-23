@@ -1,4 +1,4 @@
-package cc.cai.demo.hibernate.entity.many2one;
+package cc.cai.demo.hibernate.entity.association.many2one;
 
 public class Address {
 

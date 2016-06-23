@@ -1,4 +1,4 @@
-package cc.cai.demo.hibernate.entity.one2one;
+package cc.cai.demo.hibernate.entity.association.one2one;
 /**
  * 通过 用户-身份证 模拟一对一关系
  * one to one

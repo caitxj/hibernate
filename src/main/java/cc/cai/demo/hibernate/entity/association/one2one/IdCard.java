@@ -1,4 +1,4 @@
-package cc.cai.demo.hibernate.entity.one2one;
+package cc.cai.demo.hibernate.entity.association.one2one;
 
 public class IdCard {
 
